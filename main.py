@@ -47,7 +47,7 @@ async def main():
                             print(f"Комментарий и {config.star} звезда(звезд) отправлены к посту {post_id}")
                         
                         except BalanceTooLow:
-                            print("Ошибка: Недостаточно средств на балансе. Комментарий не отправлен.")
+                            print("Ошибка: Недостаточно средств на балансе.")
                             continue
                             
                         except PeerIdInvalid:
@@ -57,15 +57,10 @@ async def main():
                                 "В вашем канале отключены платные реакции."
                             )
                             print(f"У пользователя отключены платные реакции. ID: {post_id}")
-                            
-                        except Exception as e:
-                            print(f"Ошибка при отправке звезды: {e}")
-                            await client.create_comment(post_id, comment_body=config.text)
-                            print(f"Комментарий отправлен к посту {post_id} (ошибка отправки звезды)")
                     
                     else:
-                        await client.create_comment(post_id, comment_body=config.text)
-                        print(f"Комментарий отправлен к посту {post_id} (нет Telegram ссылки)")
+                        await client.create_comment(post_id, comment_body='TG ссылка не найдена!')
+                        print(f"Ошибка: Telegram ссылка не найдена. ID: {post_id}")
         else:
             print("Новых постов нет")
             
