@@ -1,0 +1,8 @@
+lolz_token = ''
+thread_id = 0
+text = 'Отправлено!'
+delay = 10
+star = 1
+
+api_id = 0
+api_hash = ''
