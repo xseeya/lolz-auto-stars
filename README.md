@@ -45,7 +45,7 @@ api_hash = ''        # Hash вашего Telegram приложения
 | `text`         | str    | Текст сообщения после отправки звезды |
 | `delay`        | int    | Задержка между проверкой на новые посты (По умолчанию: 10 секунд)|
 | `star`         | int    | Количество звёзд для каждого пользователя |
-| `api_id`       | int    | Получите api_id [my.telegram.org](https://my.telegram.org) |
+| `api_id`       | int    | Получите api_id на [my.telegram.org](https://my.telegram.org) |
 | `api_hash`     | str    | Получите вместе с api_id |
 
 ## :satellite: Создание Telegram сессии
