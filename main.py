@@ -47,7 +47,7 @@ async def main():
                             print(f"Комментарий и {config.star} звезда(звезд) отправлены к посту {post_id}")
                         
                         except BalanceTooLow:
-                            print("Ошибка: Недостаточно средств на балансе.")
+                            print("Ошибка: Недостаточно звёзд на балансе.")
                             continue
                             
                         except PeerIdInvalid:
